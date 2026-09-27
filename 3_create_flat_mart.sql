@@ -1,4 +1,4 @@
-DROP SCHEMA IF EXISTS flat_mart CASECADE;
+DROP SCHEMA flat_mart CASCADE;
 
 --Step 3: Create flat_mart_table
 
@@ -39,3 +39,5 @@ LEFT JOIN company_dim AS cd ON cd.company_id = jpf.company_id
 LEFT JOIN skills_job_dim AS sjd ON sjd.job_id = jpf.job_id
 LEFT JOIN skills_dim AS sd ON sd.skill_id = sjd.skill_id
 GROUP BY ALL;
+
+SELECT 'Job Mart' AS Table_Name ,Count(*) From flat_mart.job_mart;
