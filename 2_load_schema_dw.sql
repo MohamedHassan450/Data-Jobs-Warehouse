@@ -50,3 +50,11 @@ From read_csv
     'https://storage.googleapis.com/sql_de/skills_job_dim.csv',
     AUTO_DETECT = TRUE
 );
+
+SELECT 'Count Dim' AS table_name, Count(*) From company_dim
+UNION ALL
+SELECT 'Skills Dim',Count(*) From skills_dim
+UNION ALL
+SELECT 'Job Posting',Count(*) From job_postings_fact
+UNION ALL
+SELECT 'Skills Job Dim',Count(*) From skills_job_dim;
