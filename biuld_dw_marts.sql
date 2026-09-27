@@ -5,3 +5,6 @@
 
 --Step 2: Insert Data into Tables
 .read 2_load_schema_dw.sql
+
+--Step 3: Create flat_mart_table
+.read 3_create_flat_mart
